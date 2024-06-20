@@ -7,7 +7,7 @@ class HomeController extends Controller
 {
     function index() {
         // Select all slideshow from models slidshow and return into view
-        $slideshows = Slideshow::all();
+        $slideshows = Slideshow::where('enable', 1)->orderBy('ssorder')->get();
         return view('home', compact('slideshows'));
     }
 }

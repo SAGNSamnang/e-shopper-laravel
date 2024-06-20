@@ -13,6 +13,6 @@ class SlideshowSeeder extends Seeder
      */
     public function run(): void
     {
-        Slideshow::factory()->count(50)->create();
+        Slideshow::factory()->count(5)->create();
     }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->boolean('enable');
             $table->double('pprice');
             $table->string('pimg', 100);
+            $table->boolean('featured');
             $table->integer('cid');
             $table->foreign('cid')->references('cid')->on('category');
             $table->integer('quantity');

@@ -22,6 +22,7 @@ class ProductFactory extends Factory
             "pname" => $this->faker->words(1, true),
             "pdesc" => $this->faker->sentence(1, true),
             "enable" => '1',
+            "featured" => $this->faker-> randomElement([0, 1]),
             "pprice" => $this->faker->numberBetween(1, 100),
             "pimg" => $this->faker->randomElement([
                 "girl1.jpg", "girl2.jpg", "girl3.jpg"

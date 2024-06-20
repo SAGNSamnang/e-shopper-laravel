@@ -25,7 +25,7 @@ class ProductFactory extends Factory
             "featured" => $this->faker-> randomElement([0, 1]),
             "pprice" => $this->faker->numberBetween(1, 100),
             "pimg" => $this->faker->randomElement([
-                "girl1.jpg", "girl2.jpg", "girl3.jpg"
+                "p1.jpg", "p2.jpg", "p3.jpg"
             ]),
             "cid" => Category::all()->random()->cid,
             "quantity" => $this->faker->numberBetween(1, 100),

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Slideshow;
 use App\Models\Product;
+use App\Models\Category;
 class HomeController extends Controller
 {
     function index() {
@@ -14,6 +15,7 @@ class HomeController extends Controller
         $featured_products = Product::where(
             'featured', 1
         )->get();
-        return view('home', compact('slideshows', 'featured_products'));
+        $categories = Category::all();
+        return view('home', compact('slideshows', 'featured_products', 'categories'));
     }
 }

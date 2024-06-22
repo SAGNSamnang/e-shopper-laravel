@@ -1,21 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
-use App\Models\Slideshow;
-use App\Models\Product;
-use App\Models\Category;
+
 class HomeController extends Controller
 {
-    function index() {
-        // Select all slideshow from models slidshow and return into view
-        $slideshows = Slideshow::where('enable', 1)->orderBy('ssorder')->get();
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-        // Select featured product
-        $featured_products = Product::where(
-            'featured', 1
-        )->get();
-        $categories = Category::all();
-        return view('home', compact('slideshows', 'featured_products', 'categories'));
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }

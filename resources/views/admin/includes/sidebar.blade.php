@@ -4,33 +4,33 @@
 			<span class="align-middle">Admin Dashboard</span>
 		</a>
 		<ul class="sidebar-nav">
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item {{Request::is('admins') ? 'active' : ''}}">
+				<a class="sidebar-link" href="/admins">
 					<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
 				</a>
 			</li>
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item {{Request::is('admin/slideshow*')? 'active' : ''}}">
+				<a class="sidebar-link" href="/admins/slideshow/">
 					<i class="align-middle" data-feather="airplay"></i> <span class="align-middle">Slideshow</span>
 				</a>
 			</li>
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="/admin/product/">
 					<i class="align-middle" data-feather="box"></i> <span class="align-middle">Product</span>
 				</a>
 			</li>
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="/admin/category/">
 					<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
 				</a>
 			</li>
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="/admin/user/">
 					<i class="align-middle" data-feather="user"></i> <span class="align-middle">User</span>
 				</a>
 			</li>
-			<li class="sidebar-item active">
-				<a class="sidebar-link" href="index.html">
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="/admin/configuration/">
 					<i class="align-middle" data-feather="settings"></i> <span class="align-middle">Configuration</span>
 				</a>
 			</li>
